@@ -1,0 +1,19 @@
+.button {
+  height: 5.5rem;
+  padding: 0rem 1.5rem;
+  font-family: Poppins;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: var(--primary-cyan);
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.button--circular {
+  border-radius: 3rem;
+}
+
+.button--square {
+  border-radius: 0.6rem;
+}
