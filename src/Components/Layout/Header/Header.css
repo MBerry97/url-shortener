@@ -1,0 +1,17 @@
+.header_container {
+  border: 1px solid red;
+  padding: 2.4rem 1.6rem 1rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_container button {
+  border: none;
+  background-color: white;
+}
+
+#burgerMenu_icon {
+  width: 3rem;
+  height: 3.5rem;
+}
