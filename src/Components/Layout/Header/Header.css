@@ -1,9 +1,10 @@
 .header_container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 2.4rem 1.6rem 1rem 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .header_container button {

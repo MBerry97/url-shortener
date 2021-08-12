@@ -1,15 +1,13 @@
 import React from 'react';
+import './HomePage.css';
 import Header from '../Layout/Header/Header';
-import Button from '../Shared/Button/Button';
-import CircularIcon from '../Shared/Icons/CircularIcon/CircularIcon';
+import Main from '../Layout/Main/Main';
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="homePage_container">
       <Header />
-      <Button text="shorten it" type="circular" />
-      <Button text="shorten it" type="square" />
-      <CircularIcon>hi</CircularIcon>
+      <Main />
     </div>
   );
 }
