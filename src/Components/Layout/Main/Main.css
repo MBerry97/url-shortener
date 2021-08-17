@@ -1,3 +1,5 @@
+/* Image container */
+
 .workingImage_container {
   /* border: 1px solid red; */
   padding-left: 1.6rem;
@@ -11,10 +13,27 @@
 .workingImage_container img {
 }
 
-.introduction_container {
+/* introduction  */
+
+.mainIntroduction_container {
   padding: 0rem 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.mainIntroduction_container span {
+  font-size: 3.5rem;
+}
+
+.mainIntroduction_container button {
+  width: 20rem;
+}
+
+/* Links section */
+
+.mainLinks_container {
+  border: 1px solid blue;
+  padding: 0rem 1.6rem;
 }

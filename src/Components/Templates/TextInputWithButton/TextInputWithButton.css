@@ -1,0 +1,17 @@
+.textInputWithButton_container {
+  border: 1px solid red;
+  padding: 2rem;
+  height: 15rem;
+}
+
+.textInputWithButton_container form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.textInputWithButton_container input,
+.textInputWithButton_container button {
+  width: 100%;
+}
