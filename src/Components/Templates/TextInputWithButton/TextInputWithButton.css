@@ -1,7 +1,15 @@
 .textInputWithButton_container {
-  border: 1px solid red;
   padding: 2rem;
-  height: 15rem;
+  height: 18rem;
+  background-color: var(--primary-violet);
+  border-radius: 0.8rem;
+  position: relative;
+}
+.textInputWithButton_container img {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
 }
 
 .textInputWithButton_container form {
@@ -14,4 +22,14 @@
 .textInputWithButton_container input,
 .textInputWithButton_container button {
   width: 100%;
+  z-index: 2;
+}
+
+.textInputWithButton_container input {
+  font-family: Poppins;
+  height: 5.5rem;
+  padding: 0rem 1.6rem;
+  font-size: 1.5rem;
+  color: var(--neutral-gray);
+  border-radius: 0.6rem;
 }

@@ -34,6 +34,7 @@
 /* Links section */
 
 .mainLinks_container {
+  margin-top: 4rem;
   border: 1px solid blue;
   padding: 0rem 1.6rem;
 }
