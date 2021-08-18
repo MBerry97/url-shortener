@@ -28,6 +28,14 @@ export default function Main() {
       <div className="mainLinks_container">
         <TextInputWithButton onSubmit={handleShortenBtnSubmit} />
       </div>
+
+      <div className="mainStatistics_container">
+        <span>Advanced Statistics</span>
+        <p>
+          Track how your links are performing across the web with out advanced
+          statistics dashboard.
+        </p>
+      </div>
     </main>
   );
 }

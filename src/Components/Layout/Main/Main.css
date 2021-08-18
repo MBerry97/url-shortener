@@ -1,8 +1,10 @@
 /* Image container */
-
+main div {
+  padding: 0rem 1.6rem;
+}
 .workingImage_container {
   /* border: 1px solid red; */
-  padding-left: 1.6rem;
+
   height: 34rem;
   width: 52rem;
   display: flex;
@@ -16,7 +18,6 @@
 /* introduction  */
 
 .mainIntroduction_container {
-  padding: 0rem 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +35,6 @@
 /* Links section */
 
 .mainLinks_container {
-  margin-top: 4rem;
+  margin: 5rem 0rem;
   border: 1px solid blue;
-  padding: 0rem 1.6rem;
 }
