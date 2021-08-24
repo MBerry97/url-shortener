@@ -3,6 +3,8 @@ import './Main.css';
 import workingImage from '../../../assets/illustration-working.svg';
 import Button from '../../Shared/Button/Button';
 import TextInputWithButton from '../../Templates/TextInputWithButton/TextInputWithButton';
+import brandImage from '../../../assets/icon-brand-recognition.svg';
+import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
 
 export default function Main() {
   const handleShortenBtnSubmit = (event) => {
@@ -24,17 +26,24 @@ export default function Main() {
 
         <Button text="Get Started" type="circular" btnType="button" />
       </div>
+      <div className="grey-bg">
+        <div className="mainLinks_container">
+          <TextInputWithButton onSubmit={handleShortenBtnSubmit} />
 
-      <div className="mainLinks_container">
-        <TextInputWithButton onSubmit={handleShortenBtnSubmit} />
-      </div>
-
-      <div className="mainStatistics_container">
-        <span>Advanced Statistics</span>
-        <p>
-          Track how your links are performing across the web with out advanced
-          statistics dashboard.
-        </p>
+          <div className="mainStatistics_container">
+            <span>Advanced Statistics</span>
+            <p>
+              Track how your links are performing across the web with out
+              advanced statistics dashboard.
+            </p>
+            <StatisticsBox
+              title="Brand recognition"
+              description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
+            >
+              <img src={brandImage} alt="brand recognition" />
+            </StatisticsBox>
+          </div>
+        </div>
       </div>
     </main>
   );

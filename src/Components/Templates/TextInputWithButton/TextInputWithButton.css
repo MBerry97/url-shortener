@@ -3,7 +3,9 @@
   height: 18rem;
   background-color: var(--primary-violet);
   border-radius: 0.8rem;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: -9rem;
 }
 .textInputWithButton_container img {
   position: absolute;

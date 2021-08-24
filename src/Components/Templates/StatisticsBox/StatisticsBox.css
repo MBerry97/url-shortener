@@ -1,0 +1,22 @@
+.statisticsBox {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: fit-content;
+  position: relative;
+  margin-top: 7rem;
+  padding: 2.4rem;
+  background-color: white;
+  border-radius: 0.3rem;
+}
+
+.statisticsBox > div {
+  position: absolute;
+  top: -3rem;
+}
+
+.statisticsBox h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0rem;
+}

@@ -32,9 +32,34 @@ main div {
   width: 20rem;
 }
 
+.grey-bg {
+  position: relative;
+  background-color: hsl(0, 25%, 98%);
+  margin-top: 20rem;
+}
+
 /* Links section */
 
 .mainLinks_container {
   margin: 5rem 0rem;
-  border: 1px solid blue;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem;
+  /* border: 1px solid blue; */
+}
+
+/* statistics section */
+
+.mainStatistics_container {
+  padding: 7rem 0rem;
+
+  height: fit-content;
+  margin-top: 9rem;
+  width: 100%;
+}
+
+.mainStatistics_container span {
+  font-size: 3rem;
 }
