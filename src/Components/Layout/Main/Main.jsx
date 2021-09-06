@@ -7,6 +7,7 @@ import brandImage from '../../../assets/icon-brand-recognition.svg';
 import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
 import detailedImage from '../../../assets/icon-detailed-records.svg';
 import customizableImage from '../../../assets/icon-fully-customizable.svg';
+import boostImgMob from '../../../assets/bg-boost-mobile.svg';
 
 export default function Main() {
   const handleShortenBtnSubmit = (event) => {
@@ -64,6 +65,12 @@ export default function Main() {
             </StatisticsBox>
           </div>
         </div>
+      </div>
+
+      <div className="mainBoostLinks_container">
+        <img src={boostImgMob} alt="boost links background" />
+        <span>Boost your links today </span>
+        <Button text="Get Started" type="circular" btnType="button" />
       </div>
     </main>
   );
