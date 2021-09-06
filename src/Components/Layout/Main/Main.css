@@ -58,8 +58,21 @@ main div {
   height: fit-content;
   margin-top: 9rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mainStatistics_container span {
   font-size: 3rem;
+}
+
+.green-line {
+  padding: 0rem;
+  display: block;
+
+  height: 8rem;
+  width: 1rem;
+
+  background-color: var(--primary-cyan);
 }

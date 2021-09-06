@@ -5,6 +5,8 @@ import Button from '../../Shared/Button/Button';
 import TextInputWithButton from '../../Templates/TextInputWithButton/TextInputWithButton';
 import brandImage from '../../../assets/icon-brand-recognition.svg';
 import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
+import detailedImage from '../../../assets/icon-detailed-records.svg';
+import customizableImage from '../../../assets/icon-fully-customizable.svg';
 
 export default function Main() {
   const handleShortenBtnSubmit = (event) => {
@@ -37,10 +39,28 @@ export default function Main() {
               advanced statistics dashboard.
             </p>
             <StatisticsBox
-              title="Brand recognition"
+              title="Brand Recognition"
               description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
             >
               <img src={brandImage} alt="brand recognition" />
+            </StatisticsBox>
+
+            <div className="green-line" />
+
+            <StatisticsBox
+              title="Detialed Records"
+              description="Gain inisghts into who is clicking your links. Knowing when and where people engange with your content helps inform better decisions."
+            >
+              <img src={detailedImage} alt="detailed records" />
+            </StatisticsBox>
+
+            <div className="green-line" />
+
+            <StatisticsBox
+              title="Fully Customizable"
+              description="Improve brand awareness and content discoverability through customizable links, superchargin audience engagement."
+            >
+              <img src={customizableImage} alt="fully customizable" />
             </StatisticsBox>
           </div>
         </div>
