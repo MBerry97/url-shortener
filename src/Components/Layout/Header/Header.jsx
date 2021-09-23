@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import './Header.css';
 import logo from '../../../assets/logo.svg';
 import burgerMenu from '../../../assets/burger menu.svg';
@@ -21,7 +22,7 @@ export default function Header() {
       <button type="button" onClick={() => handleMenuClick()}>
         <img src={burgerMenu} alt="menu" id="burgerMenu_icon" />
       </button>
-      {isVisible && <NavBox />}
+      <AnimatePresence>{isVisible && <NavBox />}</AnimatePresence>
     </header>
   );
 }
