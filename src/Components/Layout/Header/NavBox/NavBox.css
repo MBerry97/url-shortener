@@ -1,0 +1,31 @@
+.navBox {
+  width: calc(100% - 3.2rem);
+  height: 38rem;
+
+  position: absolute;
+  top: 7.1rem;
+  border-radius: 0.8rem;
+  background-color: var(--primary-violet);
+  padding: 4rem 3rem;
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navBox > span {
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.navBox button {
+  width: 100%;
+}
+
+.navBox_divider {
+  width: 100%;
+  border: 1px solid var(--neutral-gray-violet);
+  margin-bottom: 2rem;
+}
