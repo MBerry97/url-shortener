@@ -17,3 +17,8 @@
 .button--square {
   border-radius: 0.6rem;
 }
+
+.button--active {
+  border-radius: 0.6rem !important;
+  background-color: var(--primary-violet) !important;
+}
