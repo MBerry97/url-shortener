@@ -24,7 +24,7 @@ export default function Main() {
       setError(true);
       return;
     }
-    // console.log(responsed);
+
     setError(false);
     axios
       .get(`https://api.shrtco.de/v2/shorten?url=https://${linkToShorten}`)
