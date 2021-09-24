@@ -14,11 +14,18 @@ import LinkBox from '../../Templates/LinkBox/LinkBox';
 
 export default function Main() {
   const [links, setLinks] = useState([]);
+  const [isError, setError] = useState(false);
+
   const handleShortenBtnSubmit = (event) => {
     event.preventDefault();
     const linkToShorten = event.target.link.value;
 
+    if (linkToShorten.length === 0) {
+      setError(true);
+      return;
+    }
     // console.log(responsed);
+    setError(false);
     axios
       .get(`https://api.shrtco.de/v2/shorten?url=https://${linkToShorten}`)
       .then((res) => {
@@ -29,7 +36,6 @@ export default function Main() {
       });
   };
 
-  console.log(links);
   const isLinks = links.length > 0;
 
   return (
@@ -50,7 +56,10 @@ export default function Main() {
 
       <div className="grey-bg">
         <div className="mainLinks_container">
-          <TextInputWithButton onSubmit={handleShortenBtnSubmit} />
+          <TextInputWithButton
+            onSubmit={handleShortenBtnSubmit}
+            isError={isError}
+          />
           {isLinks && (
             <div className="mainGeneratedLinks_container">
               {links.map(({ newLink, oldLink }) => {
