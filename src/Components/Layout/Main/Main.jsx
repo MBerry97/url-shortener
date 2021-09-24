@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Main.css';
 import workingImage from '../../../assets/illustration-working.svg';
 import Button from '../../Shared/Button/Button';
@@ -8,12 +9,29 @@ import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
 import detailedImage from '../../../assets/icon-detailed-records.svg';
 import customizableImage from '../../../assets/icon-fully-customizable.svg';
 import boostImgMob from '../../../assets/bg-boost-mobile.svg';
+import useFetch from '../../../Hooks/useFetch';
+import LinkBox from '../../Templates/LinkBox/LinkBox';
 
 export default function Main() {
+  const [links, setLinks] = useState([]);
   const handleShortenBtnSubmit = (event) => {
     event.preventDefault();
-    console.log('submitted');
+    const linkToShorten = event.target.link.value;
+
+    // console.log(responsed);
+    axios
+      .get(`https://api.shrtco.de/v2/shorten?url=https://${linkToShorten}`)
+      .then((res) => {
+        const shortLink = res.data.result.full_short_link;
+        setLinks((prev) => {
+          return [...prev, { newLink: shortLink, oldLink: linkToShorten }];
+        });
+      });
   };
+
+  console.log(links);
+  const isLinks = links.length > 0;
+
   return (
     <main className="main">
       <div className="workingImage_container">
@@ -29,11 +47,18 @@ export default function Main() {
 
         <Button text="Get Started" type="circular" btnType="button" />
       </div>
+
       <div className="grey-bg">
         <div className="mainLinks_container">
           <TextInputWithButton onSubmit={handleShortenBtnSubmit} />
-
-          <div className="mainStatistics_container">
+          {isLinks && (
+            <div className="mainGeneratedLinks_container">
+              {links.map(({ newLink, oldLink }) => {
+                return <LinkBox newLink={newLink} oldLink={oldLink} />;
+              })}
+            </div>
+          )}
+          <div className={`mainStatistics_container ${isLinks && 'no-margin'}`}>
             <span>Advanced Statistics</span>
             <p>
               Track how your links are performing across the web with out

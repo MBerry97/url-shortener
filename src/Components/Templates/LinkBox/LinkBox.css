@@ -1,0 +1,37 @@
+.linkBox {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.6rem;
+  margin-top: 1.5rem;
+  text-align: start;
+  padding: 1.5rem 0rem;
+  border: 1px solid hsl(0, 14%, 93%);
+}
+
+.linkBox span {
+  padding: 0rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.linkBox span:first-of-type {
+  display: flex;
+  /* align-items: center; */
+  height: 3.5rem;
+  border-bottom: 1px solid var(--neutral-gray);
+}
+
+.linkBox span:last-of-type {
+  display: flex;
+  margin-top: 1.2rem;
+  color: var(--primary-cyan);
+}
+
+#linkBox_btn {
+  margin: 1.5rem 1.5rem 0rem 1.5rem;
+  height: 4rem;
+}

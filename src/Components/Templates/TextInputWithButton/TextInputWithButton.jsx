@@ -8,7 +8,7 @@ export default function TextInputWithButton({ onSubmit }) {
     <div className="textInputWithButton_container">
       <img src={mobileShortenBg} alt="background illustration" />
       <form onSubmit={(e) => onSubmit(e)}>
-        <input type="text" placeholder="Shorten a link here..." />
+        <input type="text" placeholder="Shorten a link here..." name="link" />
         <Button type="square" text="Shorten it!" btnType="submit" />
       </form>
     </div>
