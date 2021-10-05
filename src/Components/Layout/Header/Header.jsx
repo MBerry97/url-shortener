@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import './Header.css';
 import logo from '../../../assets/logo.svg';
 import burgerMenu from '../../../assets/burger menu.svg';
 import NavBox from './NavBox/NavBox';
+import useInnerWidth from '../../../Hooks/useInnerWidth';
 
 export default function Header() {
   const [isVisible, setVisibility] = useState(false);
@@ -15,6 +16,9 @@ export default function Header() {
   const handleMenuClick = () => {
     toggleNavVisibility();
   };
+
+  const windowWidth = useInnerWidth();
+  console.log(windowWidth);
 
   return (
     <header className="header_container">
