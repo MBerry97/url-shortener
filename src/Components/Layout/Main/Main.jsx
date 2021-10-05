@@ -40,19 +40,21 @@ export default function Main() {
 
   return (
     <main className="main">
-      <div className="workingImage_container">
-        <img src={workingImage} alt="working illustration" />
-      </div>
+      <section className="main-section-intro">
+        <div className="workingImage_container">
+          <img src={workingImage} alt="working illustration" />
+        </div>
 
-      <div className="mainIntroduction_container">
-        <span>More than just shorter links</span>
-        <p>
-          Build your brand's recognition and get detailed insights on how your
-          links are performing
-        </p>
+        <div className="mainIntroduction_container">
+          <span>More than just shorter links</span>
+          <p>
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
 
-        <Button text="Get Started" type="circular" btnType="button" />
-      </div>
+          <Button text="Get Started" type="circular" btnType="button" />
+        </div>
+      </section>
 
       <div className="grey-bg">
         <div className="mainLinks_container">
