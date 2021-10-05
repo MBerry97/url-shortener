@@ -14,7 +14,7 @@ main > div,
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 59rem;
+  max-width: 79rem;
 
   overflow: hidden;
   padding: 0rem 1.6rem;
@@ -137,7 +137,7 @@ main > div,
 .workingImage_container,
 .mainIntroduction_container,
 .mainLinks_container {
-  max-width: 59rem;
+  max-width: 79rem;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -147,6 +147,7 @@ main > div,
     padding: 0rem 0rem 0rem 15rem;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-top: 2rem;
   }
 
   .workingImage_container {
@@ -162,6 +163,7 @@ main > div,
     display: flex;
     align-items: flex-start;
     /* min-width: 45rem; */
+    max-width: 65rem;
   }
 
   .mainIntroduction_container span {
@@ -176,5 +178,10 @@ main > div,
     font-size: 2rem;
     font-weight: 500;
     margin: 0rem 0rem 2rem 0rem;
+  }
+
+  .mainLinks_container {
+    max-width: 100%;
+    width: calc(100% - 27.8rem);
   }
 }

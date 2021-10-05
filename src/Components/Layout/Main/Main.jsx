@@ -9,7 +9,6 @@ import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
 import detailedImage from '../../../assets/icon-detailed-records.svg';
 import customizableImage from '../../../assets/icon-fully-customizable.svg';
 import boostImgMob from '../../../assets/bg-boost-mobile.svg';
-import useFetch from '../../../Hooks/useFetch';
 import LinkBox from '../../Templates/LinkBox/LinkBox';
 
 export default function Main() {

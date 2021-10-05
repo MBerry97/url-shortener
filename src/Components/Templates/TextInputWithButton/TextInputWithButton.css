@@ -6,6 +6,7 @@
   position: absolute;
   width: 100%;
   top: -9rem;
+  overflow: hidden;
 }
 .textInputWithButton_container img {
   position: absolute;
@@ -35,6 +36,7 @@
   font-size: 1.5rem;
   color: var(--neutral-gray);
   border-radius: 0.6rem;
+  border: none;
 }
 
 .textInputWithButton_container input:focus {
@@ -49,4 +51,39 @@
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--secondary-red);
+}
+
+@media only screen and (min-width: 1440px) {
+  .textInputWithButton_container {
+    display: flex;
+
+    align-items: center;
+    padding: 0rem 5rem;
+  }
+  .textInputWithButton_container form {
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+  }
+  .textInputWithButton_container input {
+    flex-grow: 1;
+    margin-right: 3rem;
+  }
+
+  .textInputWithButton_container button {
+    width: 18rem;
+  }
+
+  .textInputWithButton_container form span {
+    position: absolute;
+    top: 13rem;
+    left: 5.4rem;
+    z-index: 2;
+  }
+
+  .textInputWithButton_container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
