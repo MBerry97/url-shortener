@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Button from '../../Shared/Button/Button';
 import './TextInputWithButton.css';
 import mobileShortenBg from '../../../assets/bg-shorten-mobile.svg';
+import desktopShortenBg from '../../../assets/bg-shorten-desktop.svg';
+import { homePageContext } from '../../../Contexts/HomePageContext';
 
 export default function TextInputWithButton({ onSubmit, isError }) {
+  const { isDesktopWidth } = useContext(homePageContext);
   return (
     <div className="textInputWithButton_container">
-      <img src={mobileShortenBg} alt="background illustration" />
+      {!isDesktopWidth && (
+        <img src={mobileShortenBg} alt="background illustration" />
+      )}
+
+      {isDesktopWidth && (
+        <img src={desktopShortenBg} alt="background illustration" />
+      )}
+
       <form onSubmit={(e) => onSubmit(e)}>
         <input
           type="text"

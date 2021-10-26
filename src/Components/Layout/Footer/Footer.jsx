@@ -11,22 +11,25 @@ export default function Footer() {
     <footer className="footer">
       <img src={logo} alt="logo" />
 
-      <span className="footerSpan_heading">Features</span>
-      <span className="footerSpan_subHeading">Link shortening</span>
-      <span className="footerSpan_subHeading">Branded Links</span>
-      <span className="footerSpan_subHeading">Analytics</span>
-
-      <span className="footerSpan_heading">Resources</span>
-      <span className="footerSpan_subHeading">Blog</span>
-      <span className="footerSpan_subHeading">Developers</span>
-      <span className="footerSpan_subHeading">Support</span>
-
-      <span className="footerSpan_heading">Company</span>
-      <span className="footerSpan_subHeading">About</span>
-      <span className="footerSpan_subHeading">Our Team</span>
-      <span className="footerSpan_subHeading">Careers</span>
-      <span className="footerSpan_subHeading">Contact</span>
-
+      <div>
+        <span className="footerSpan_heading">Features</span>
+        <span className="footerSpan_subHeading">Link shortening</span>
+        <span className="footerSpan_subHeading">Branded Links</span>
+        <span className="footerSpan_subHeading">Analytics</span>
+      </div>
+      <div>
+        <span className="footerSpan_heading">Resources</span>
+        <span className="footerSpan_subHeading">Blog</span>
+        <span className="footerSpan_subHeading">Developers</span>
+        <span className="footerSpan_subHeading">Support</span>
+      </div>
+      <div>
+        <span className="footerSpan_heading">Company</span>
+        <span className="footerSpan_subHeading">About</span>
+        <span className="footerSpan_subHeading">Our Team</span>
+        <span className="footerSpan_subHeading">Careers</span>
+        <span className="footerSpan_subHeading">Contact</span>
+      </div>
       <div className="footerIcon_container">
         <img src={facebookLogo} alt="facebook" />
         <img src={twitterLogo} alt="twitter" />

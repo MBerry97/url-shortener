@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import './Main.css';
 import workingImage from '../../../assets/illustration-working.svg';
@@ -9,12 +9,15 @@ import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
 import detailedImage from '../../../assets/icon-detailed-records.svg';
 import customizableImage from '../../../assets/icon-fully-customizable.svg';
 import boostImgMob from '../../../assets/bg-boost-mobile.svg';
-import useFetch from '../../../Hooks/useFetch';
+import boostImgDesktop from '../../../assets/bg-boost-desktop.svg';
 import LinkBox from '../../Templates/LinkBox/LinkBox';
+import { homePageContext } from '../../../Contexts/HomePageContext';
 
 export default function Main() {
   const [links, setLinks] = useState([]);
   const [isError, setError] = useState(false);
+
+  const { isDesktopWidth } = useContext(homePageContext);
 
   const handleShortenBtnSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +27,7 @@ export default function Main() {
       setError(true);
       return;
     }
-    // console.log(responsed);
+
     setError(false);
     axios
       .get(`https://api.shrtco.de/v2/shorten?url=https://${linkToShorten}`)
@@ -40,19 +43,21 @@ export default function Main() {
 
   return (
     <main className="main">
-      <div className="workingImage_container">
-        <img src={workingImage} alt="working illustration" />
-      </div>
+      <section className="main-section-intro ">
+        <div className="workingImage_container">
+          <img src={workingImage} alt="working illustration" />
+        </div>
 
-      <div className="mainIntroduction_container">
-        <span>More than just shorter links</span>
-        <p>
-          Build your brand's recognition and get detailed insights on how your
-          links are performing
-        </p>
+        <div className="mainIntroduction_container">
+          <span>More than just shorter links</span>
+          <p>
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
 
-        <Button text="Get Started" type="circular" btnType="button" />
-      </div>
+          <Button text="Get Started" type="circular" btnType="button" />
+        </div>
+      </section>
 
       <div className="grey-bg">
         <div className="mainLinks_container">
@@ -70,39 +75,45 @@ export default function Main() {
           <div className={`mainStatistics_container ${isLinks && 'no-margin'}`}>
             <span>Advanced Statistics</span>
             <p>
-              Track how your links are performing across the web with out
+              Track how your links are performing across the web with our
               advanced statistics dashboard.
             </p>
-            <StatisticsBox
-              title="Brand Recognition"
-              description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
-            >
-              <img src={brandImage} alt="brand recognition" />
-            </StatisticsBox>
+            <div className="mainStatisticsBox_container">
+              <StatisticsBox
+                title="Brand Recognition"
+                description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
+              >
+                <img src={brandImage} alt="brand recognition" />
+              </StatisticsBox>
 
-            <div className="green-line" />
+              <div className="green-line" />
 
-            <StatisticsBox
-              title="Detialed Records"
-              description="Gain inisghts into who is clicking your links. Knowing when and where people engange with your content helps inform better decisions."
-            >
-              <img src={detailedImage} alt="detailed records" />
-            </StatisticsBox>
+              <StatisticsBox
+                title="Detailed Records"
+                description="Gain inisghts into who is clicking your links. Knowing when and where people engange with your content helps inform better decisions."
+              >
+                <img src={detailedImage} alt="detailed records" />
+              </StatisticsBox>
 
-            <div className="green-line" />
+              <div className="green-line" />
 
-            <StatisticsBox
-              title="Fully Customizable"
-              description="Improve brand awareness and content discoverability through customizable links, superchargin audience engagement."
-            >
-              <img src={customizableImage} alt="fully customizable" />
-            </StatisticsBox>
+              <StatisticsBox
+                title="Fully Customizable"
+                description="Improve brand awareness and content discoverability through customizable links, superchargin audience engagement."
+              >
+                <img src={customizableImage} alt="fully customizable" />
+              </StatisticsBox>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="mainBoostLinks_container">
-        <img src={boostImgMob} alt="boost links background" />
+        <img
+          src={isDesktopWidth ? boostImgDesktop : boostImgMob}
+          alt="boost links background"
+        />
+
         <span>Boost your links today </span>
         <Button text="Get Started" type="circular" btnType="button" />
       </div>

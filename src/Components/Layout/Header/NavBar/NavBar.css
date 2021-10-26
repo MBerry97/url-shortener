@@ -1,0 +1,15 @@
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar span {
+  margin-right: 3rem;
+  color: var(--neutral-gray-violet);
+}
+
+.navBar button {
+  width: 15rem;
+}

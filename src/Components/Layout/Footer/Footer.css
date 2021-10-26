@@ -15,6 +15,12 @@
   margin: 3rem 0rem 1.5rem 0rem;
 }
 
+.footer > div:not(.footer div:last-child) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footerSpan_subHeading {
   color: white;
   font-size: 1.2rem;
@@ -27,4 +33,50 @@
   width: 40%;
   justify-content: space-between;
   margin-top: 3rem;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer {
+    flex-direction: row;
+    padding: 7rem 15rem;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer > div:last-child {
+    /* justify-self: flex-end; */
+    /* justify-content: flex-end; */
+    /* position: relative;
+    right: 0rem; */
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+
+  .footer > div:last-child img {
+    margin-right: 2rem;
+  }
+
+  .footer > div {
+    width: 100%;
+  }
+
+  .footerSpan_heading,
+  .footerSpan_subHeading {
+    width: 100%;
+    text-align: left;
+  }
+  .footer > div,
+  .footerSpan_heading {
+    margin-top: 0rem;
+  }
+
+  .footer img {
+    margin-right: 22%;
+  }
+
+  .footer > div:not(.footer div:last-child) {
+    margin-right: 10rem;
+  }
 }
