@@ -19,7 +19,7 @@
 
 .statisticsBox > div {
   position: absolute;
-  top: -3rem;
+  top: -5rem;
 }
 
 .statisticsBox h1 {
@@ -28,6 +28,15 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .statisticsBox {
+    justify-content: start;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 52rem;
+  }
+  .statisticsBox h1 {
+    margin-top: 5rem;
+  }
   .statisticsBox:first-of-type {
     margin-top: 0rem;
   }
@@ -37,5 +46,11 @@
   }
   .statisticsBox:nth-of-type(3) {
     margin-top: 14rem;
+  }
+
+  .statisticsBox > div {
+    position: absolute;
+    top: -5rem;
+    left: 4rem;
   }
 }

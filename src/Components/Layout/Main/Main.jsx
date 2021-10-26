@@ -74,7 +74,7 @@ export default function Main() {
               Track how your links are performing across the web with our
               advanced statistics dashboard.
             </p>
-            <div className="mainstatisticsBox_container">
+            <div className="mainStatisticsBox_container">
               <StatisticsBox
                 title="Brand Recognition"
                 description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
@@ -85,7 +85,7 @@ export default function Main() {
               <div className="green-line" />
 
               <StatisticsBox
-                title="Detialed Records"
+                title="Detailed Records"
                 description="Gain inisghts into who is clicking your links. Knowing when and where people engange with your content helps inform better decisions."
               >
                 <img src={detailedImage} alt="detailed records" />

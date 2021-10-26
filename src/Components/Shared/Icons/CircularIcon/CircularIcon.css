@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   background-color: var(--primary-violet);
 }
