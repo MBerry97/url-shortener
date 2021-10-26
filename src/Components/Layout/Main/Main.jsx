@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import './Main.css';
 import workingImage from '../../../assets/illustration-working.svg';
@@ -9,11 +9,15 @@ import StatisticsBox from '../../Templates/StatisticsBox/StatisticsBox';
 import detailedImage from '../../../assets/icon-detailed-records.svg';
 import customizableImage from '../../../assets/icon-fully-customizable.svg';
 import boostImgMob from '../../../assets/bg-boost-mobile.svg';
+import boostImgDesktop from '../../../assets/bg-boost-desktop.svg';
 import LinkBox from '../../Templates/LinkBox/LinkBox';
+import { homePageContext } from '../../../Contexts/HomePageContext';
 
 export default function Main() {
   const [links, setLinks] = useState([]);
   const [isError, setError] = useState(false);
+
+  const { isDesktopWidth } = useContext(homePageContext);
 
   const handleShortenBtnSubmit = (event) => {
     event.preventDefault();
@@ -105,7 +109,11 @@ export default function Main() {
       </div>
 
       <div className="mainBoostLinks_container">
-        <img src={boostImgMob} alt="boost links background" />
+        <img
+          src={isDesktopWidth ? boostImgDesktop : boostImgMob}
+          alt="boost links background"
+        />
+
         <span>Boost your links today </span>
         <Button text="Get Started" type="circular" btnType="button" />
       </div>
