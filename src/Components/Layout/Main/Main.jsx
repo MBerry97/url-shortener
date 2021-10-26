@@ -39,7 +39,7 @@ export default function Main() {
 
   return (
     <main className="main">
-      <section className="main-section-intro">
+      <section className="main-section-intro ">
         <div className="workingImage_container">
           <img src={workingImage} alt="working illustration" />
         </div>
@@ -71,33 +71,35 @@ export default function Main() {
           <div className={`mainStatistics_container ${isLinks && 'no-margin'}`}>
             <span>Advanced Statistics</span>
             <p>
-              Track how your links are performing across the web with out
+              Track how your links are performing across the web with our
               advanced statistics dashboard.
             </p>
-            <StatisticsBox
-              title="Brand Recognition"
-              description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
-            >
-              <img src={brandImage} alt="brand recognition" />
-            </StatisticsBox>
+            <div className="mainstatisticsBox_container">
+              <StatisticsBox
+                title="Brand Recognition"
+                description="Boost your brand recognition with each click. Generic links dont mean a thing. Branded links helps instill confidence in your content"
+              >
+                <img src={brandImage} alt="brand recognition" />
+              </StatisticsBox>
 
-            <div className="green-line" />
+              <div className="green-line" />
 
-            <StatisticsBox
-              title="Detialed Records"
-              description="Gain inisghts into who is clicking your links. Knowing when and where people engange with your content helps inform better decisions."
-            >
-              <img src={detailedImage} alt="detailed records" />
-            </StatisticsBox>
+              <StatisticsBox
+                title="Detialed Records"
+                description="Gain inisghts into who is clicking your links. Knowing when and where people engange with your content helps inform better decisions."
+              >
+                <img src={detailedImage} alt="detailed records" />
+              </StatisticsBox>
 
-            <div className="green-line" />
+              <div className="green-line" />
 
-            <StatisticsBox
-              title="Fully Customizable"
-              description="Improve brand awareness and content discoverability through customizable links, superchargin audience engagement."
-            >
-              <img src={customizableImage} alt="fully customizable" />
-            </StatisticsBox>
+              <StatisticsBox
+                title="Fully Customizable"
+                description="Improve brand awareness and content discoverability through customizable links, superchargin audience engagement."
+              >
+                <img src={customizableImage} alt="fully customizable" />
+              </StatisticsBox>
+            </div>
           </div>
         </div>
       </div>

@@ -18,6 +18,7 @@ main > div,
 
   overflow: hidden;
   padding: 0rem 1.6rem;
+  /* min-height: calc(100vh - 8.9rem); */
 }
 
 .workingImage_container {
@@ -52,7 +53,7 @@ main > div,
 
 .grey-bg {
   position: relative;
-  background-color: hsl(0, 25%, 98%);
+  background-color: #f7f8fd;
   margin-top: 10rem;
   width: 100%;
   display: flex;
@@ -86,17 +87,25 @@ main > div,
   height: fit-content;
   margin-top: 9rem;
   width: 100%;
+}
+
+.mainstatisticsBox_container,
+.mainStatistics_container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.no-margin {
-  margin: 0rem;
-}
-
 .mainStatistics_container span {
   font-size: 3rem;
+}
+
+.mainStatistics_container p {
+  max-width: 50rem;
+}
+
+.no-margin {
+  margin: 0rem;
 }
 
 .green-line {
@@ -183,5 +192,17 @@ main > div,
   .mainLinks_container {
     max-width: 100%;
     width: calc(100% - 27.8rem);
+  }
+
+  .mainstatisticsBox_container {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .green-line {
+    width: 4rem;
+    height: 1rem;
   }
 }
