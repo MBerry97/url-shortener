@@ -8,8 +8,13 @@
 .navBar span {
   margin-right: 3rem;
   color: var(--neutral-gray-violet);
+  cursor: pointer;
 }
 
 .navBar button {
   width: 15rem;
+}
+
+.navBar span:hover {
+  color: var(--neutral-dark-violet);
 }

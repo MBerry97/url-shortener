@@ -8,6 +8,11 @@
   background-color: var(--primary-cyan) !important;
   font-weight: 800;
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(110%);
 }
 
 .button--circular {

@@ -79,4 +79,11 @@
   .footer > div:not(.footer div:last-child) {
     margin-right: 10rem;
   }
+
+  .footerSpan_subHeading:hover,
+  .footerIcon_container img:hover {
+    color: var(--primary-cyan);
+
+    cursor: pointer;
+  }
 }
