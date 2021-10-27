@@ -16,6 +16,7 @@ import { homePageContext } from '../../../Contexts/HomePageContext';
 export default function Main() {
   const [links, setLinks] = useState([]);
   const [isError, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const { isDesktopWidth } = useContext(homePageContext);
 
@@ -25,13 +26,16 @@ export default function Main() {
 
     if (linkToShorten.length === 0) {
       setError(true);
+      setIsLoading(false);
       return;
     }
 
     setError(false);
+    setIsLoading(true);
     axios
-      .get(`https://api.shrtco.de/v2/shorten?url=https://${linkToShorten}`)
+      .get(`https://api.shrtco.de/v2/shorten?url=${linkToShorten}`)
       .then((res) => {
+        setIsLoading(false);
         const shortLink = res.data.result.full_short_link;
         setLinks((prev) => {
           return [...prev, { newLink: shortLink, oldLink: linkToShorten }];
@@ -64,6 +68,7 @@ export default function Main() {
           <TextInputWithButton
             onSubmit={handleShortenBtnSubmit}
             isError={isError}
+            isLoading={isLoading}
           />
           {isLinks && (
             <div className="mainGeneratedLinks_container">
