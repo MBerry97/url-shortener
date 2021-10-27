@@ -33,7 +33,7 @@ export default function Main() {
     setError(false);
     setIsLoading(true);
     axios
-      .get(`https://api.shrtco.de/v2/shorten?url=https://${linkToShorten}`)
+      .get(`https://api.shrtco.de/v2/shorten?url=${linkToShorten}`)
       .then((res) => {
         setIsLoading(false);
         const shortLink = res.data.result.full_short_link;
