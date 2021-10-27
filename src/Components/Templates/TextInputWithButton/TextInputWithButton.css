@@ -46,6 +46,9 @@
 .textInputWithButton_input-error::placeholder {
   color: var(--secondary-red);
 }
+.textInputWithButton_input-error {
+  outline: 3px solid var(--secondary-red);
+}
 
 .textInputWithButton_container form span {
   font-size: 1.4rem;

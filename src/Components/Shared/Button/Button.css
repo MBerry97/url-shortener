@@ -8,6 +8,7 @@
   background-color: var(--primary-cyan) !important;
   font-weight: 800;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .button--circular {
@@ -21,4 +22,10 @@
 .button--active {
   border-radius: 0.6rem !important;
   background-color: var(--primary-violet) !important;
+}
+
+@media only screen and (min-width: 1440px) {
+  .button:hover {
+    filter: brightness(110%);
+  }
 }
