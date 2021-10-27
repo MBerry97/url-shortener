@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Button from '../../Shared/Button/Button';
 import './LinkBox.css';
+import { homePageContext } from '../../../Contexts/HomePageContext';
 
 function LinkBox({ newLink, oldLink }) {
   const [copied, setCopied] = useState(false);
