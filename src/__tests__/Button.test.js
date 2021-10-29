@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 // import 'jest-canvas-mock';
-import Button from './Button'; // import your component to test
+import Button from '../Components/Shared/Button/Button'; // import your component to test
 
 afterEach(cleanup);
 

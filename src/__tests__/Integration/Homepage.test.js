@@ -18,31 +18,34 @@ describe('<HomePage />', () => {
   it('Renders without crashing', () => {
     render(<HomePage />);
   });
-  it('Error message appears when text box has no input ', async () => {
-    render(<HomePage />);
 
-    const shortenBtn = screen.getByRole('button', { name: /Shorten it!/i });
-    const errorSpan = screen.queryByTestId('error_span');
+  describe('<Main />', () => {
+    it('Error message appears when text box has no input ', async () => {
+      render(<HomePage />);
 
-    expect(errorSpan).not.toBeInTheDocument();
+      const shortenBtn = screen.getByRole('button', { name: /Shorten it!/i });
+      const errorSpan = screen.queryByTestId('error_span');
 
-    await fireEvent.click(shortenBtn);
+      expect(errorSpan).not.toBeInTheDocument();
 
-    const errorSpanPostClick = screen.queryByTestId('error_span');
+      await fireEvent.click(shortenBtn);
 
-    expect(errorSpanPostClick).toBeInTheDocument();
-  });
-  it('LinkBox component appears when text box has an input', async () => {
-    render(<HomePage />);
+      const errorSpanPostClick = screen.queryByTestId('error_span');
 
-    const inputBox = screen.getByTestId('text_input');
-    const shortenBtn = screen.getByRole('button', { name: /Shorten it!/i });
-    await fireEvent.change(inputBox, { target: { value: 'youtube.com' } });
+      expect(errorSpanPostClick).toBeInTheDocument();
+    });
+    it('LinkBox component appears when text box has an input', async () => {
+      render(<HomePage />);
 
-    await fireEvent.click(shortenBtn);
+      const inputBox = screen.getByTestId('text_input');
+      const shortenBtn = screen.getByRole('button', { name: /Shorten it!/i });
+      await fireEvent.change(inputBox, { target: { value: 'youtube.com' } });
 
-    const linkBoxPostClick = await screen.findByTestId('linkBox');
+      await fireEvent.click(shortenBtn);
 
-    expect(linkBoxPostClick).toBeInTheDocument();
+      const linkBoxPostClick = await screen.findByTestId('linkBox');
+
+      expect(linkBoxPostClick).toBeInTheDocument();
+    });
   });
 });

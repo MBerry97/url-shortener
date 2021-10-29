@@ -8,6 +8,7 @@ function NavBox() {
   return (
     <motion.div
       className="navBox"
+      data-testid="navBox"
       initial={{
         opacity: 0,
         transform: 'translate3d(0px, -24.5px, 0px)',
