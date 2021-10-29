@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Button from '../../Shared/Button/Button';
 import './LinkBox.css';
-import { homePageContext } from '../../../Contexts/HomePageContext';
 
 function LinkBox({ newLink, oldLink }) {
   const [copied, setCopied] = useState(false);
@@ -15,7 +14,7 @@ function LinkBox({ newLink, oldLink }) {
   };
 
   return (
-    <div className="linkBox">
+    <div className="linkBox" data-testid="linkBox">
       <span>{oldLink}</span>
       <span>{newLink}</span>
       {!copied && (
