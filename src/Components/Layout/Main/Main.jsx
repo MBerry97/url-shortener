@@ -22,7 +22,8 @@ export default function Main() {
 
   const handleShortenBtnSubmit = (event) => {
     event.preventDefault();
-    const linkToShorten = event.target.link.value;
+    const { link } = event.target.elements;
+    const linkToShorten = link.value;
 
     if (linkToShorten.length === 0) {
       setError(true);

@@ -25,7 +25,11 @@ export default function Header() {
 
       {!isDesktopWidth && (
         <>
-          <button type="button" onClick={() => handleMenuClick()}>
+          <button
+            type="button"
+            onClick={() => handleMenuClick()}
+            data-testid="burger_menu"
+          >
             <img src={burgerMenu} alt="menu" id="burgerMenu_icon" />
           </button>
           <AnimatePresence>{isVisible && <NavBox />}</AnimatePresence>

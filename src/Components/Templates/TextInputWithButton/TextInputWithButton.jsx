@@ -36,8 +36,9 @@ export default function TextInputWithButton({ onSubmit, isError, isLoading }) {
           placeholder="Shorten a link here..."
           name="link"
           className={isError && 'textInputWithButton_input-error'}
+          data-testid="text_input"
         />
-        {isError && <span>Please add a link</span>}
+        {isError && <span data-testid="error_span">Please add a link</span>}
         <Button type="square" text={loadingButtonText} btnType="submit" />
       </form>
     </div>

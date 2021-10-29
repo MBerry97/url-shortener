@@ -4,7 +4,7 @@ import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <div className="navBar">
+    <div className="navBar" data-testid="navBar">
       <div>
         <span>Features</span>
         <span>Pricing</span>
