@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Design screenshots
 
-- Desktop design:
+- Desktop design(1440px):
 
 ![Desktop design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
 
-- [Mobile design](./design/mobile-design.jpg)
+- [Mobile design (375px)](./design/mobile-design.jpg)
 
 ### Links
 
