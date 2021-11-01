@@ -12,9 +12,10 @@ import boostImgMob from '../../../assets/bg-boost-mobile.svg';
 import boostImgDesktop from '../../../assets/bg-boost-desktop.svg';
 import LinkBox from '../../Templates/LinkBox/LinkBox';
 import { homePageContext } from '../../../Contexts/HomePageContext';
+import useStorageState from '../../../Hooks/useStorageState';
 
 export default function Main() {
-  const [links, setLinks] = useState([]);
+  const [links, setLinks] = useStorageState([], 'links');
   const [isError, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -45,7 +46,7 @@ export default function Main() {
   };
 
   const isLinks = links.length > 0;
-
+  console.log(window.localStorage.getItem('links'));
   return (
     <main className="main">
       <section className="main-section-intro ">
