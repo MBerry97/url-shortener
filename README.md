@@ -13,7 +13,7 @@
 
 ### The challenge
 
-Build & deploy my own version as close to the designs as possible whilst fulfilling the following user journeys.
+Build & deploy my own version as close to the designs as possible whilst fulfilling the following user stories.
 
 Users should be able to:
 
