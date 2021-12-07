@@ -1,4 +1,7 @@
 import React, { useState, useContext } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+
+import { motion } from 'framer-motion';
 import axios from 'axios';
 import './Main.css';
 import workingImage from '../../../assets/illustration-working.svg';
@@ -46,15 +49,31 @@ export default function Main() {
   };
 
   const isLinks = links.length > 0;
-  console.log(window.localStorage.getItem('links'));
+
   return (
     <main className="main">
       <section className="main-section-intro ">
-        <div className="workingImage_container">
+        <motion.div
+          className="workingImage_container"
+          initial={{ x: '1000px' }}
+          animate={{ x: '0px' }}
+          transition={{
+            duration: 0.6,
+            type: 'tween',
+          }}
+        >
           <img src={workingImage} alt="working illustration" />
-        </div>
+        </motion.div>
 
-        <div className="mainIntroduction_container">
+        <motion.div
+          className="mainIntroduction_container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            delay: 0.6,
+          }}
+        >
           <span>More than just shorter links</span>
           <p>
             Build your brand's recognition and get detailed insights on how your
@@ -62,7 +81,7 @@ export default function Main() {
           </p>
 
           <Button text="Get Started" type="circular" btnType="button" />
-        </div>
+        </motion.div>
       </section>
 
       <div className="grey-bg">
@@ -80,11 +99,13 @@ export default function Main() {
             </div>
           )}
           <div className={`mainStatistics_container ${isLinks && 'no-margin'}`}>
-            <span>Advanced Statistics</span>
-            <p>
-              Track how your links are performing across the web with our
-              advanced statistics dashboard.
-            </p>
+            <ScrollAnimation animateIn="fadeIn" animateOnce>
+              <span>Advanced Statistics</span>
+              <p>
+                Track how your links are performing across the web with our
+                advanced statistics dashboard.
+              </p>
+            </ScrollAnimation>
             <div className="mainStatisticsBox_container">
               <StatisticsBox
                 title="Brand Recognition"
@@ -120,9 +141,17 @@ export default function Main() {
           src={isDesktopWidth ? boostImgDesktop : boostImgMob}
           alt="boost links background"
         />
-
-        <span>Boost your links today </span>
-        <Button text="Get Started" type="circular" btnType="button" />
+        <ScrollAnimation
+          animateIn="fadeIn"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <span>Boost your links today </span>
+          <Button text="Get Started" type="circular" btnType="button" />
+        </ScrollAnimation>
       </div>
     </main>
   );
