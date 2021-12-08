@@ -148,6 +148,7 @@ export default function Main() {
             flexDirection: 'column',
             alignItems: 'center',
           }}
+          animateOnce
         >
           <span>Boost your links today </span>
           <Button text="Get Started" type="circular" btnType="button" />
