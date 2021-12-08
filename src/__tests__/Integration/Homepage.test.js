@@ -12,7 +12,7 @@ import HomePage from '../../Components/Pages/HomePage';
 
 afterEach(cleanup);
 
-configure({ asyncUtilTimeout: 7500 });
+configure({ asyncUtilTimeout: 15000 });
 
 describe('<HomePage />', () => {
   it('Renders without crashing', () => {

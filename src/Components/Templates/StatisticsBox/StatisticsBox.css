@@ -36,14 +36,14 @@
   .statisticsBox h1 {
     margin-top: 5rem;
   }
-  .statisticsBox:first-of-type {
+  .statisticsBox:nth-child(1) {
     margin-top: 0rem;
   }
 
-  .statisticsBox:nth-of-type(2) {
+  .statisticsBox:nth-child(3) {
     margin-top: 7rem;
   }
-  .statisticsBox:nth-of-type(3) {
+  .statisticsBox:last-of-type {
     margin-top: 14rem;
   }
 

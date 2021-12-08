@@ -14,7 +14,7 @@ export default function HomePage() {
       <div className="homePage_container">
         <Header />
         <Main />
-        <Footer />
+        <Footer isDesktopWidth={isDesktopWidth} />
       </div>
     </Provider>
   );
